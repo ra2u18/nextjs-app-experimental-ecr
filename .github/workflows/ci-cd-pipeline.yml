@@ -17,7 +17,7 @@ jobs:
     outputs:
       repository-name: ${{ steps.create-registry.outputs.repository-name }}
     steps:
-      - name: Check Out
+      - name: Checkout
         uses: actions/checkout@v2
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
