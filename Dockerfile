@@ -1,5 +1,7 @@
 FROM node:16-alpine
 
+# Install curl
+RUN apk add --no-cache curl
 # Install pnpm
 RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
 
@@ -15,4 +17,4 @@ USER node
 
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["pnpm", "start"]
