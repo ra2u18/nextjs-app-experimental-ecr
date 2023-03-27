@@ -1,4 +1,8 @@
 FROM node:16-alpine
+
+# Install pnpm
+RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
+
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml ./
